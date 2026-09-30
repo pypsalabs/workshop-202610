@@ -30,9 +30,9 @@ Some familiarity with Python and `pandas` is helpful, but not required. Short in
 
 ## Venue
 
-Room: TBD<br>
-Building: TBD, Berlin<br>
-Building entrance · Room · Map: TBD
+EmMi LuebesKind-Haus<br>
+Littenstraße 87, 10179 Berlin-Mitte<br>
+Find location on a [Map](https://www.google.com/maps/search/?api=1&query=Littenstra%C3%9Fe+87%2C+10179+Berlin)
 
 
 ## Preliminary agenda
