@@ -1,0 +1,30 @@
+# MyST build outputs
+_build
+.ipynb_checkpoints
+
+# data and intermediate outputs
+berlin/data
+berlin/tmp/
+berlin/*.csv
+*.geojson
+*.nc
+*.tiff
+*.tif
+*.html
+*.png
+!berlin/logo*.png
+!berlin/pypsa-terminal.png
+!berlin/cvar-distribution.png
+*cleared.ipynb
+data
+!berlin/data/
+!berlin/data/phl-network.nc
+!berlin/data/time-series-sample.csv
+
+# local asset-generation utilities
+.local/
+
+# python
+.venv
+__pycache__
+.ruff_cache

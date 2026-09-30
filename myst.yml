@@ -1,0 +1,43 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: PyPSA Workshop Berlin
+  authors:
+  - name: Fabian Neumann
+  - name: Iegor Riepin
+  license: CC-BY-4.0
+  open_access: true
+  copyright: "2026"
+  github: pypsalabs/workshop-202610
+  settings:
+    output_matplotlib_strings: remove
+  # Slide-deck PDFs, copied verbatim into the built site (dev server and HTML
+  # export). Each entry lands at the site root under its basename, so a single
+  # source file is published at both /<file>.pdf and /berlin/<file>.pdf — the two
+  # places where the slide pages' iframes resolve `../<file>.pdf`, depending on
+  # whether the page URL carries a trailing slash (GitHub Pages redirects to
+  # `/berlin/<page>/`; the dev server and in-site navigation use `/berlin/<page>`).
+  static_files:
+  - public/berlin
+  - public/berlin/PyPSA-Berlin.pdf
+  - public/berlin/PyPSA-Eur-Berlin.pdf
+  toc:
+  - file: berlin/intro.md
+  - file: berlin/setup.md
+  - file: berlin/pypsa-ecosystem.md
+  - file: berlin/pypsa-eur-model.md
+  - file: berlin/01-pypsa-intro.ipynb
+  - file: berlin/02-pypsa-dispatch-problems.ipynb
+  - file: berlin/03-pypsa-sectors-expansion.ipynb
+  - file: berlin/04-pypsa-scenarios.ipynb
+  - file: berlin/05-pypsa-stochastic.ipynb
+  - file: berlin/annex-python.ipynb
+  - file: berlin/annex-pandas.ipynb
+site:
+  options:
+    logo: berlin/logo-primary-light.svg
+    logo_dark: berlin/logo-primary-dark.svg
+    folders: true
+    style: berlin/workshop.css
+    hide_authors: true
+  template: book-theme

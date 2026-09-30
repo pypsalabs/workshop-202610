@@ -1,0 +1,56 @@
+# PyPSA Workshop Berlin (October 2026)
+
+Materials for a hands-on energy system modelling workshop in Berlin, organised
+and hosted by [PyPSA Labs](https://pypsalabs.org/). See the
+[workshop listing and agenda](https://pypsalabs.org/services/training).
+
+The materials are published as a [Jupyter Book 2](https://jupyterbook.org)
+(MyST) website at
+[pypsalabs.github.io/workshop-202610](https://pypsalabs.github.io/workshop-202610/).
+
+## Usage
+
+### Develop locally
+
+Install [`pixi`](https://pixi.sh), clone the repository, and run:
+
+```sh
+pixi install
+pixi run jupyter book start
+```
+
+This serves a local live preview. Workshop sources are in `berlin/`. To execute all notebooks and create the deployable site in
+`_build/html/`, run:
+
+```sh
+pixi run jupyter-book build --html --execute
+```
+
+### Environments and deployment
+
+Dependencies are declared in `pixi.toml` (conda-forge). Reproducible
+installations use `pixi.lock` with `pixi install` (run `pixi update` to refresh
+it).
+
+Pushes to `main` build and deploy the website through GitHub Actions. A separate
+workflow (`.github/workflows/notebook-image.yml`) builds the single-user
+notebook image for the workshop JupyterHub from the pixi `image` environment and
+pushes it to GHCR. Lockfiles are generated locally and committed when
+dependencies change. Participant-facing installation instructions are in
+`berlin/setup.md`.
+
+## Credits
+
+Some of the workshop materials are adapted from Fabian Neumann's fantastic
+[Data Science for Energy System Modelling](https://fneum.github.io/data-science-for-esm/)
+course at TU Berlin.
+
+The workshop also draws on examples and explanations from the
+[PyPSA documentation](https://docs.pypsa.org/).
+
+This workshop is created using the open-source
+[Jupyter Book project](https://jupyterbook.org/).
+
+## License
+
+Code and notebooks are licensed under MIT (see `LICENSE`); textual content is CC-BY-4.0.
