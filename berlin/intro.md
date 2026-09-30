@@ -44,15 +44,17 @@ Find location on a [Map](https://www.google.com/maps/search/?api=1&query=Littens
 
 | Time | Session |
 |---|---|
-| 09:00–10:00 | *Soft start: arrival, coffee, getting to know each other* |
-| 10:00–10:45 | **Introduction to the PyPSA ecosystem** |
-| 10:45–11:00 | *Break* |
-| 11:00–12:30 | **Introduction to optimisation with PyPSA** |
-| 12:30–13:30 | *Lunch* |
-| 13:30–15:30 | **Modelling with PyPSA: system capacity planning, sector coupling, results retrieval and statistics** |
-| 15:30–15:45 | *Break* |
-| 15:45–17:00 | **PyPSA-Eur workflow: introduction and hands-on modelling** |
-| 17:00–17:30 | **Wrap-up of day 1 and open questions** |
+| 09:00–09:30 | *Soft start: arrival, coffee, getting to know each other* |
+| 09:30–10:30 | **Introduction to the PyPSA ecosystem** |
+| 10:30–10:45 | *Break* |
+| 10:45–12:00 | **Introduction to optimisation with PyPSA** |
+| 12:00–13:00 | *Lunch* |
+| 13:00–14:00 | **Modelling with PyPSA: capacity expansion planning** |
+| 14:00–14:15 | *Break* |
+| 14:15–15:15 | **Modelling with PyPSA: sector coupling, results retrieval and statistics** |
+| 15:15–15:45 | *Break* |
+| 15:45–16:45 | **PyPSA-Eur workflow: introduction and hands-on modelling** |
+| 16:45–17:00 | **Wrap-up of day 1 and open questions** |
 | From 18:30 | *Shared dinner at [Hofbräu Wirtshaus Berlin](https://maps.app.goo.gl/dWfymNViH4gMXoHc6) (near Alexanderplatz)* |
 
 :::
@@ -64,13 +66,13 @@ Find location on a [Map](https://www.google.com/maps/search/?api=1&query=Littens
 
 | Time | Session |
 |---|---|
-| 09:00–10:45 | **PyPSA-Eur: a deeper look at the workflow** |
-| 10:45–11:00 | *Break* |
-| 11:00–12:30 | **Modelling with PyPSA: stochastic optimisation and risk aversion** |
+| 09:00–10:30 | **PyPSA-Eur: a deeper look at the workflow** |
+| 10:30–11:00 | *Break* |
+| 11:00–12:30 | **PyPSA-Eur: hands-on modelling** |
 | 12:30–13:30 | *Lunch* |
-| 13:30–15:00 | **Modelling with PyPSA: security of supply analysis** |
-| 15:00–15:15 | *Break* |
-| 15:15–17:00 | **Open Q&A: PyPSA functionality, workflows, and your own modelling questions** |
+| 13:30–15:00 | **Modelling with PyPSA: stochastic optimisation and risk aversion** |
+| 15:00–15:30 | *Break* |
+| 15:30–16:30 | **Open Q&A: PyPSA functionality, workflows, and your own modelling questions** |
 
 :::
 
