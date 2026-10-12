@@ -93,11 +93,11 @@ of [PyPSA Labs](https://pypsalabs.org/).
 
 Run everything in your browser with all packages pre-installed, on the workshop JupyterHub:
 
-1. Open [workshop.pypsalabs.org](https://workshop.pypsalabs.org).
+1. Open the hub your presenter assigns you: [workshop1.pypsalabs.org](https://workshop1.pypsalabs.org) or [workshop2.pypsalabs.org](https://workshop2.pypsalabs.org).
 2. Log in with any username you like and the **workshop password** shown by the presenter.
 3. The workshop notebooks are already in your workspace. Open `01-pypsa-intro.ipynb` to begin.
 
-Your files are saved between the two workshop days. Use the same username on both days.
+Your files are saved between the two workshop days. Use the same hub and the same username on both days.
 
 ### Google Colab (fallback)
 

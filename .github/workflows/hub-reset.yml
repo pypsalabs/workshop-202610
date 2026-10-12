@@ -1,5 +1,5 @@
 # Manual deploy button (Actions tab -> Run workflow). This is the ONLY thing
-# that changes what runs on the VM - pushes just build the image to GHCR.
+# that changes what runs on the VMs - pushes just build the image to GHCR.
 #
 # Both modes pull the latest image, then:
 #   soft - stop running user servers so they re-spawn on the new image.
@@ -16,19 +16,33 @@ on:
         type: choice
         options: [soft, hard]
         default: soft
+      target:
+        description: "Which hub to reset."
+        type: choice
+        options: [both, workshop1, workshop2]
+        default: both
 
 jobs:
   reset:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - hub: workshop1
+          host: workshop10-1-u78259.vm.elestio.app
+        - hub: workshop2
+          host: jupyterhub-6genr-u78259.vm.elestio.app
     steps:
-    - env:
+    - if: github.event.inputs.target == 'both' || github.event.inputs.target == matrix.hub
+      env:
         VM_SSH_KEY: ${{ secrets.VM_SSH_KEY }}
         MODE: ${{ github.event.inputs.mode }}
       run: |
         mkdir -p ~/.ssh
         echo "$VM_SSH_KEY" > ~/.ssh/id
         chmod 600 ~/.ssh/id
-        PULL='docker pull ghcr.io/pypsalabs/workshop-notebook:latest'
+        PULL='docker pull ghcr.io/pypsalabs/workshop-202610-notebook:latest'
         STOP='docker ps -q --filter name=jupyter- | xargs -r docker stop'
         WIPE='docker volume ls -q --filter name=^jupyterhub- | xargs -r docker volume rm'
         if [ "$MODE" = "hard" ]; then
@@ -37,4 +51,4 @@ jobs:
           REMOTE="$PULL && $STOP"
         fi
         ssh -i ~/.ssh/id -o StrictHostKeyChecking=accept-new \
-          root@jupyterhub-ietu8-u78259.vm.elestio.app "$REMOTE"
+          root@${{ matrix.host }} "$REMOTE"

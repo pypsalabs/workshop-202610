@@ -14,6 +14,6 @@ docker build -f docker/Dockerfile -t workshop-notebook .
 ```
 
 CI (`.github/workflows/notebook-image.yml`) builds and pushes it to
-`ghcr.io/pypsalabs/workshop-notebook` on every change to `docker/**`,
+`ghcr.io/pypsalabs/workshop-202610-notebook` on every change to `docker/**`,
 `berlin/**`, `pixi.toml`, or `pixi.lock`. The Elestio spawner pulls it via the
 `DOCKER_NOTEBOOK_IMAGE` env var.

@@ -2,7 +2,7 @@
 # touch the VM - run "Hub reset" to make a new image live for users.
 #
 # ONE-TIME manual step after the first run: make the GHCR package
-# `workshop-notebook` public (org -> Packages -> package -> settings ->
+# `workshop-202610-notebook` public (org -> Packages -> package -> settings ->
 # Change visibility) so the VM pulls it without credentials.
 name: Notebook image
 
@@ -35,7 +35,7 @@ jobs:
     - id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ghcr.io/pypsalabs/workshop-notebook
+        images: ghcr.io/pypsalabs/workshop-202610-notebook
         tags: |
           type=raw,value=latest
           type=sha
