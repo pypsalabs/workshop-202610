@@ -41,8 +41,8 @@ jobs:
       run: |
         mkdir -p ~/.ssh
         printf '%s\n' "$VM_SSH_KEY" > ~/.ssh/id
-        ssh-keygen -y -f ~/.ssh/id > /dev/null || { echo "VM_SSH_KEY is not a valid private key"; exit 1; }
         chmod 600 ~/.ssh/id
+        ssh-keygen -y -f ~/.ssh/id > /dev/null || { echo "VM_SSH_KEY is not a valid private key"; exit 1; }
         PULL='docker pull ghcr.io/pypsalabs/workshop-202610-notebook:latest'
         STOP='docker ps -aq --filter name=jupyter- | xargs -r docker rm -f'
         WIPE='docker volume ls -q --filter name=^jupyterhub- | xargs -r docker volume rm'
